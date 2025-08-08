@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portrait Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="portraits/art1.webp" type="image">
+</head>
+<body>
+  <header>
+    <h1>My Art Gallery</h1>
+    <p style="font-family: cursive;font-size: 10px;">Mandeep Nalwaya</p>
+  </header>
+
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const totalImages = 24; // Change this to your image count
+
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement('img');
+      img.src = `portraits/portrait${i}.jpg`;
+      img.alt = `Portrait ${i}`;
+      img.loading = 'lazy';
+      gallery.appendChild(img);
+    }
+  </script>
+  
+</body>
+</html>
